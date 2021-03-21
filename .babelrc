@@ -1,0 +1,27 @@
+{
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "absoluteRuntime": "babel-runtime",
+        "corejs": false,
+        "helpers": true,
+        "regenerator": true
+      }
+    ],
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "es",
+        "style": true
+      }
+    ]
+  ],
+  "presets": [
+    "@babel/preset-react",
+    ["@babel/preset-env", {
+      "targets": "defaults"
+    }]
+  ]
+}

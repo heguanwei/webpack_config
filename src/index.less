@@ -1,0 +1,36 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+@height_100: 150px;
+:global{
+  html, body, #app{
+    width: 100%;
+    height: 100%;
+  }
+}
+.app{
+  width: 100%;
+  height: 100%;
+  background: red;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  >h1{
+    color: inherit;
+    height: @height_100;
+    line-height: @height_100;
+  }
+  >img{
+    height: calc(100% - 2*@height_100);
+    border-radius: 3px;
+  }
+  div{
+    height: @height_100;
+    display: flex;
+    align-items: center;
+  }
+}
