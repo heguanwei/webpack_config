@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ReactDom from 'react-dom';
-import style from './index.less';
+import style from './list.less';
 
 export default class List extends Component{
     constructor(props) {
@@ -18,8 +18,13 @@ export default class List extends Component{
     }
 
     render() {
-        return (<div className={style.app}>
-            react project
+        const {data} = this.state;
+        return (<div className={style.list}>
+            {
+                data.map((item, index) => {
+                    return <div key={index}>{item}</div>
+                })
+            }
         </div>)
     }
 }
